@@ -1,5 +1,5 @@
 {
-    "name": "berkaycubuk/laravel-pwa",
+    "name": "silviolleite/laravelpwa",
     "description": "Looks like an app, feels like an app, but NOT an app.",
     "license": "MIT",
     "keywords": [
@@ -12,10 +12,6 @@
         {
             "name": "Silvio Luis Leite",
             "email": "silviolleite@gmail.com"
-        },
-        {
-            "name": "Berkay Çubuk",
-            "email": "berkay@berkaycubuk.com"
         }
     ],
     "autoload": {
