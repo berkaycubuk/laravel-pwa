@@ -34,7 +34,15 @@
     // Initialize the service worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/serviceworker.js', {
-            scope: '.'
+            scope: '.',
+            onUpdate: (registration) => {
+                if (registration && registration.waiting) {
+                    if (window.confirm('New version available! Refresh to update your app?'))
+                        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+                        window.location.reload();
+                    }
+                }
+            },
         }).then(function (registration) {
             // Registration was successful
             console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
